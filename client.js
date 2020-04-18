@@ -1,20 +1,33 @@
 const socket = io('http://localhost:3000');
 
-const messageContainer = document.getElementById('message-container');
+
+const nameForm = document.getElementById('name-container');
+const nameInput = document.getElementById('name-input');
+
+const chatContainer = document.getElementById('chat-container');
 const messageForm = document.getElementById('send-container');
+const messageContainer = document.getElementById('message-container');
 const messageInput = document.getElementById('message-input');
 
-const userName = document.getElementById('username');
+const userNameEl = document.getElementById('username');
 
 
-initApp();
+function initApp(userName) {
+  nameForm.style.display = 'none';
+  chatContainer.style.display = 'block';
 
-function initApp() {
-  const name = prompt('what is your name') || 'Anonymous';
+  const name =  userName || 'Anonymous'; // prompt('what is your name') ||
   socket.emit('new-user', name);
   appendMessage(`You've joined successfully!`, true);
-  userName.innerText = `(${name})`;
+  userNameEl.innerText = `(${name})`;
 };
+
+nameForm.addEventListener('submit', e => {
+  e.preventDefault();
+  const name = nameInput.value;
+  if (!name) return;
+  initApp(name);
+});
 
 // message Broadcasted
 socket.on('chat-message', data => {

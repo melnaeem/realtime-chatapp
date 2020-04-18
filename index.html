@@ -14,14 +14,19 @@
 <body>
   <div id="app-container">
 
+    <form id="name-container">
+      <input type="text" id="name-input" class="app-input" placeholder="Your name..">
+      <button type="submit" class="send-button">submit</button>
+    </form>
+
     <div id="chat-container">
       <header><span id="online-span"></span><strong id="username"></strong></header>
       <div id="message-container">
       </div>
 
-      <form action="" id="send-container">
-        <input type="text" placeholder="Enter message here..." id="message-input">
-        <button type="submit" id="send-button">
+      <form id="send-container">
+        <input type="text" placeholder="Enter message here..." class="app-input" id="message-input">
+        <button type="submit" class="send-button">
           <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;"
             xml:space="preserve">

@@ -20,6 +20,8 @@ body {
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid #ddd;
+
+  display: none;
 }
 
 #chat-container header {
@@ -62,34 +64,46 @@ form#send-container {
   overflow: hidden;
 }
 
-#message-input {
+.app-input {
   width: 100%;
   padding: 10px;
   font-size: 16px;
   outline: none;
-  border: none;
   font-family: 'montserrat';
+  border: none;
 }
 
-#send-button {
+#name-container {
+  display: flex;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#name-container .send-button {
+  color: #fff;
+  background: #554bb8;
+}
+
+.send-button {
   background: #fff;
   border: none;
-  color: #fff;
+  color: #554bb8;
   font-size: 16px;
-  font-weight: 600;
   cursor: pointer;
   outline: none;
   border-inline-start: 1px solid #ddd;
+  font-family: 'montserrat';
 }
 
-#send-button svg {
+.send-button svg {
   width: 36px;
   fill: #554bb8;
   height: 20px;
   transition: .5s;
 }
 
-#send-button:hover svg {
+.send-button:hover svg {
   transform: scale(1.1) rotate(10deg);
 }
 
