@@ -2,7 +2,7 @@
   "name": "realtime",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.html",
   "scripts": {
     "start": "node server",
     "devStart": "nodemon server.js"
