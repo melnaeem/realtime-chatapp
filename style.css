@@ -1,0 +1,103 @@
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  margin: 0;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  font-family: 'montserrat';
+  box-sizing: border-box;
+}
+
+#app-container {
+  max-width: 350px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#chat-container {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+#chat-container header {
+  text-align: center;
+  padding: 10px 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+#message-container {
+  height: 350px;
+  overflow: auto;
+  padding: 10px;
+}
+
+#message-container div {
+  padding: 5px;
+  margin-bottom: 5px;
+  background: #554bb8;
+  color: #fff;
+  border-radius: 5px;
+}
+
+#message-container div.myMsg {
+  background: #ddd;
+  color: #000;
+}
+
+#message-container div.myMsg:first-of-type {
+  text-align: center;
+  font-size: 12px;
+  border-radius: 0;
+  margin-top: -10px;
+  color: #424242;
+  background: transparent;
+}
+
+form#send-container {
+  display: flex;
+  border-top: 1px solid #ddd;
+  overflow: hidden;
+}
+
+#message-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  font-family: 'montserrat';
+}
+
+#send-button {
+  background: #fff;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  border-inline-start: 1px solid #ddd;
+}
+
+#send-button svg {
+  width: 36px;
+  fill: #554bb8;
+  height: 20px;
+  transition: .5s;
+}
+
+#send-button:hover svg {
+  transform: scale(1.1) rotate(10deg);
+}
+
+#online-span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-inline-end: 5px;
+  background: green;
+  border-radius: 50%;
+}
