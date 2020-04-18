@@ -1,8 +1,13 @@
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
+const socketPORT = process.env.socketPORT || 3000;
 
-const io = require('socket.io')(PORT);
+const io = require('socket.io')(socketPORT);
+
+const server = require('./pages-server');
 
 const users = {};
+
+server.server.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
 
 io.on('connection', socket => {
   socket.on('new-user', name => {
