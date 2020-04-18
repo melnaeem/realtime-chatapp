@@ -27,6 +27,7 @@ nameForm.addEventListener('submit', e => {
   const name = nameInput.value;
   if (!name) return;
   initApp(name);
+  return false;
 });
 
 // message Broadcasted
@@ -49,6 +50,7 @@ messageForm.addEventListener('submit', e => {
   appendMessage(`You: ${message}`, true);
   socket.emit('send-chat-message', message);
   messageInput.value = '';
+  return false;
 });
 
 function appendMessage(message, isMyMsg) {
