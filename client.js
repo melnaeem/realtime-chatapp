@@ -26,8 +26,7 @@ nameForm.addEventListener('submit', e => {
   e.preventDefault();
   const name = nameInput.value;
   if (!name) return;
-  // initApp(name);
-  nameForm.parentElement.appendChild(document.createTextNode('Triggered'));
+  initApp(name);
   return false;
 });
 
