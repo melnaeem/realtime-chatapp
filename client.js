@@ -16,19 +16,19 @@ function initApp(userName) {
   nameForm.style.display = 'none';
   chatContainer.style.display = 'block';
 
-  const name =  userName || 'Anonymous'; // prompt('what is your name') ||
+  const name = userName || 'Anonymous'; // prompt('what is your name') ||
   socket.emit('new-user', name);
   appendMessage(`You've joined successfully!`, true);
   userNameEl.innerText = `(${name})`;
 };
 
-nameForm.addEventListener('submit', e => {
+nameForm.onsubmit = e => {
   e.preventDefault();
   const name = nameInput.value;
   if (!name) return;
   initApp(name);
   return false;
-});
+};
 
 // message Broadcasted
 socket.on('chat-message', data => {
