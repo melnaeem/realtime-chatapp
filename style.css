@@ -47,6 +47,7 @@ body {
 #message-container div.myMsg {
   background: #ddd;
   color: #000;
+  word-break: break-word;
 }
 
 #message-container div.myMsg:first-of-type {
