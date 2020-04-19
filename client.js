@@ -1,4 +1,4 @@
-const socket = io('http://localhost:3000');
+const socket = io('http://localhost:5000');
 
 
 const nameForm = document.getElementById('name-container');
@@ -27,6 +27,7 @@ nameForm.addEventListener('submit', e => {
   const name = nameInput.value;
   if (!name) return;
   initApp(name);
+  return false;
 });
 
 // message Broadcasted
