@@ -27,7 +27,6 @@ nameForm.addEventListener('submit', e => {
   const name = nameInput.value;
   if (!name) return;
   initApp(name);
-  return false;
 });
 
 // message Broadcasted
